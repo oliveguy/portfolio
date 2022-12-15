@@ -30,10 +30,11 @@ $mobile_section: 2rem 1rem;
   margin:0; padding:0;
   color:$text;
 }
+
 .App{
   position:relative;
   font-family: $heading;
-  height: 3000px;
+  // height: 3000px;
 }
 .navigation{
   position:fixed;
@@ -424,6 +425,10 @@ footer{
   }
 }
 @media screen and (max-width:800px){
+  div#root{
+    width:100%;
+    overflow: hidden;
+  }
   nav{
     display:none;
   }
