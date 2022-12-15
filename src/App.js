@@ -4,6 +4,7 @@ import logo_cl from './assets/logo_cl.png';
 import profile_pic from './assets/sh.jpg';
 import chain_gr from './assets/chain-gr-20.png';
 import giticon from './assets/giticon.png';
+import likedin from './assets/likedin.png';
 
 import sass from './assets/sass.png';
 import javascript from './assets/javascript.png';
@@ -20,7 +21,7 @@ function Navigation(){
   <ul>
     <li className='title'>
       <a href="/" className='title'>
-        <img src={logo_bw} className="logoImg"></img><span>Sunghyun Park</span>
+        <img src={logo_cl} className="logoImg"></img><span>Sunghyun Park</span>
       </a>
     </li>
     <li><a href="#about">About</a></li>
@@ -85,6 +86,19 @@ function Technologies(){
   </section>
 </div>
 }
+function Footer(){
+  return <footer>
+  <ul>
+    <li><b>SUNGHYUN PARK</b></li>
+    <li>Copyright © 2022, Sunghyun Park. All Rights Reserved.</li>
+    <li>
+      <a href="https://github.com/oliveguy"><img src={giticon}/></a>
+      <a href="https://www.linkedin.com/in/sunghyun-park-a29438243"><img src={likedin}/></a>
+      <a></a>
+    </li>
+  </ul>
+</footer>
+}
 // THE APP
 function App() {
   const webItems = [
@@ -112,7 +126,7 @@ function App() {
       id:2,
       title:'Coco Bakery',
       brief:'e-Commerce',
-      desc:'e-Commerce website for selling bread and sweat treats',
+      desc:'e-Commerce website for selling bread and sweat treats to customers',
       img:'coco',
       tech:['JS','PHP','MySQL'],
       url:'http://dev.saitnewmedia.ca/~spark/mmda225/final/',
@@ -120,23 +134,47 @@ function App() {
     },
     {
       id:3,
-      title:'infinity and beyond',
+      title:'Infinity & Beyond',
       brief:'2022 NASA International Space Apps Challenge',
       desc:'Website for displaying current aurora status',
       img:'iab',
       tech:['JS','PHP','MySQL'],
-      url:'www.infinityandbeyond.club/',
+      url:'https://www.infinityandbeyond.club/',
       git:'https://github.com/hejkeikei/infinity-and-beyond'
     },
     {
       id:4,
       title:'Porfolio',
       brief:'My portfolio website',
-      desc:'Website for displaying current aurora status',
+      desc:'Portfolio website to introduce Sunghyun',
       img:'portfolio',
       tech:['SCSS','JS','REACT'],
-      url:'',
-      git:''
+      url:'https://devsunghyun.com/',
+      git:'https://github.com/oliveguy/portfolio'
+    },
+    {
+      id:5,
+      title:'NMPD Promotion',
+      brief:'NMPD Program website',
+      desc:'This website is to introduce NMPD to people',
+      img:'nmpd',
+      tech:['HTML','Pure CSS','JS'],
+      url:'http://dev.saitnewmedia.ca/~spark/NMPD_promotion/',
+      git:'https://github.com/oliveguy/portfolio'
+    }
+  ]
+  const uiuxItems = [
+    {
+      id:0,
+      title:'Grammy\'s',
+      img:'grammy',
+      url:'https://xd.adobe.com/view/5089acd2-d3b5-4ccd-b26a-bbcb584f5df6-05da/grid'
+    },
+    {
+      id:1,
+      title:'Tipplo',
+      img:'tipplo',
+      url:'http://dev.saitnewmedia.ca/~spark/mmda324/calculator/'
     }
   ]
   return (
@@ -151,7 +189,7 @@ function App() {
           <p>which I participated in and contributed to</p>
         </div>
         <section className='webDev'>
-          <h3 className='projectSunTitle'>Web Developments</h3>
+          <h3 className='projectSubTitle'>Web Developments</h3>
           <ul>
             {webItems.map(items=>{
               return <li>
@@ -173,12 +211,21 @@ function App() {
           </ul>
         </section>
         <section className='uiux'>
-        <h3 className='projectSunTitle'>UI/UX</h3>
+        <h3 className='projectSubTitle'>UI/UX</h3>
           <ul>
+            {uiuxItems.map(uiuxItem=>{
+              return <li>
+              <a href={uiuxItem.url} target='_blank'><img src={require(`./assets/${uiuxItem.img}.jpg`)} className="uiuxview"/></a>
+              {/* <img src={require(`./assets/blank.jpg`)}/> */}
+              <a href={uiuxItem.url} target='_blank'><img src={chain_gr}></img></a>
+              </li>
+              })
+            }
 
           </ul>
-        </section>    
+        </section>
       </div>
+      <Footer></Footer>
     </div>
   );
 }
