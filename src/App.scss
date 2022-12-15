@@ -3,14 +3,19 @@
 $blur_bk:rgba(0,0,0,.5);
 $d_red:#2c0404;
 $l_red:#3d0b0b;
+$box_red: #ffe4e4;
+$box_accent:rgb(173, 46, 46);
+$box_text:#701414;
 // Text
 $text: #fff;
 // Font
 $heading:'Noto Sans Display', times, sans-serif;
 $body:'Noto Sans Display', times, sans-serif;
 // align
-$vew_width: 100ch;
-$section_padding: 6rem 0;
+$view_width: 100ch;
+$section_padding: 6rem 1rem;
+$mobile_section: 2rem 1rem;
+
 @mixin button(){
   padding:.25rem 1.25rem;
   margin:1rem;
@@ -33,6 +38,7 @@ $section_padding: 6rem 0;
 .navigation{
   position:fixed;
   top:0px;
+  background-color: rgba(80,25,25,.75);;
   // display:flex;
   // justify-content: center;
   width:100%;
@@ -44,7 +50,7 @@ $section_padding: 6rem 0;
     z-index: 10;
     margin: 0 auto;
     color: $text;
-    max-width:$vew_width;
+    max-width:$view_width;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -150,7 +156,7 @@ div#about{
   background-color: $d_red;
   article.aboutArea{
     margin:0 auto;
-    max-width:$vew_width;
+    max-width:$view_width;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -175,23 +181,191 @@ div#technologies{
   background-color:$l_red;
   padding: $section_padding;
   div.techWrapper{
-    max-width: $vew_width;
+    max-width: $view_width;
     margin:0 auto;
-    padding-bottom: 2rem;
+    text-align: center;
     h2{
       font-size: 3rem;
     }
+    ul.techStack{
+      display:flex;
+      width:100%;
+      justify-content: space-evenly;
+      margin: 2rem 0;
+      li{
+        list-style-type: none;
+        img{
+          width:70px; height: 70px;
+          border-radius: 14px;
+        }
+        &:hover{
+          transform:scale(1.25);
+          transition: all .25s ease-in-out;
+        }
+      }
+    }
   }
   section{
-    max-width: $vew_width;
+    max-width: $view_width;
     margin:0 auto;
     display:flex;
     article{
       margin:0 1rem;
       width:100%;
       height:200px;
-      border: 1px solid white;
       text-align: center;
+      background-color: $box_red;
+      h3{
+        padding:1rem;
+        background-color: $box_accent;
+      }
     }
   }
+}
+
+div#projects{
+  background-color:$d_red;
+  padding: $section_padding;
+  div.projectText{
+    max-width: $view_width;
+    margin:0 auto;
+    margin-bottom: 2rem;
+    text-align: center;
+    h2{
+      font-size: 3rem;
+    }
+  }
+  h3{
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+section.webDev{
+  h4{
+    width:100%;
+    font-size: 1.25rem;
+    text-align: center;
+    padding:1rem;
+    background-color: $box_accent;
+  }
+  ul{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin:2rem;
+    li{
+      background-color: $box_red;
+      list-style-type: none;
+      max-width: 30ch;
+      display:flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      margin:1rem;
+      img.webProjectImg{
+        width:90%; height:90%;
+        max-height: 163px;
+        margin:1rem;
+      }
+    }
+  }
+}
+div.webProjectText{
+  padding:0 1rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  p, span{
+    color:$box_text;
+    font-weight: 600;
+    text-align: center;
+  }
+  p:nth-of-type(1){
+    text-decoration: underline;
+    margin-bottom: 1rem;
+  }
+  p:nth-of-type(3){
+    margin: 1rem 0;
+  }
+  span{
+    padding:.25rem;
+    margin:0.25rem;
+    font-size: .75rem;
+    display:inline-block;
+    border-radius: 5px;
+    background-color: $box_accent;
+    color:$text;
+  }
+}
+div.projectLink{
+  padding: .5rem;
+  background-color: $box_accent;
+  display:flex;
+  align-items: center;
+  width:100%;
+  justify-content:space-around;
+  a{
+    display:flex;
+    justify-content: center;
+    width:100%;
+    img:hover{
+      filter:brightness(500%);
+    }
+  }
+}
+
+@media screen and (max-width:800px){
+  nav{
+    display:none;
+  }
+  div#about{
+    padding: $mobile_section;
+    article.aboutArea{
+      flex-direction: column;
+      img{
+        width:80%; height:auto;
+        max-width: 300px;
+        max-height: 300px;
+        border-radius: 10%;
+        margin:0 auto;
+      }
+      div.aboutText > h2{
+        font-size: 2rem;
+      }
+      p{
+        font-size: .9rem;
+      }
+    }
+  }
+  h2.h2Title{
+    font-size: 2rem;
+  }
+  div#technologies{
+    padding: $mobile_section;
+    section{
+      flex-direction: column;
+      align-items: center;
+      margin:1rem;
+      // padding:1rem;
+      article{
+        margin:1rem 0;
+        min-height: 300px;
+        max-width: 500px;
+      }
+    }
+  }
+  ul.techStack{
+    margin-bottom: 0;
+    li{
+      img.techIcons{
+        border-radius: 50%;
+        max-width: 50px;
+        max-height: 50px;
+      }
+    }
+  }
+  div#projects{
+    padding: $mobile_section;
+  }
+
 }
