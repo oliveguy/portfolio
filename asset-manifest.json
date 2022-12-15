@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.105bdb1f.css",
+    "main.js": "/static/js/main.610bd1b8.js",
+    "static/js/787.749b4a44.chunk.js": "/static/js/787.749b4a44.chunk.js",
+    "static/media/video.mp4": "/static/media/video.48c2947d58fdb973bd97.mp4",
+    "static/media/grammy.jpg": "/static/media/grammy.0e7ce2bb23d35776488e.jpg",
+    "static/media/tipplo.jpg": "/static/media/tipplo.eee8b2741b19bd74aef0.jpg",
+    "static/media/sh.jpg": "/static/media/sh.6112d67f08d425d56dca.jpg",
+    "static/media/javascript.png": "/static/media/javascript.e796f05e591d65085e31.png",
+    "static/media/nmpd.jpg": "/static/media/nmpd.28aab7e9403f47bec538.jpg",
+    "static/media/coco.jpg": "/static/media/coco.8344d53df819db31e201.jpg",
+    "static/media/sass.png": "/static/media/sass.530f63cc29ce8da0728e.png",
+    "static/media/fishcreek.jpg": "/static/media/fishcreek.9a25a04615a32f83cc74.jpg",
+    "static/media/mongodb.png": "/static/media/mongodb.af4d2d737b650407a5a5.png",
+    "static/media/logo_cl.png": "/static/media/logo_cl.3f54b3940d696ba59080.png",
+    "static/media/tremolo.jpg": "/static/media/tremolo.155b604b8ef2a0f5a716.jpg",
+    "static/media/nodeexpress.png": "/static/media/nodeexpress.311efb871c27734a8d0c.png",
+    "static/media/intro.jpg": "/static/media/intro.bf19e5c8047d650f8700.jpg",
+    "static/media/react.png": "/static/media/react.0ed27b3160ea14a785d5.png",
+    "static/media/iab.jpg": "/static/media/iab.b5378bc6661b069ffa82.jpg",
+    "static/media/portfolio.jpg": "/static/media/portfolio.258eefa0058ad003d143.jpg",
+    "static/media/logo_bw.png": "/static/media/logo_bw.aab6cde2474dcbf12f07.png",
+    "static/media/sass.jpg": "/static/media/sass.3388d1ab436bf9d4c3d6.jpg",
+    "index.html": "/index.html",
+    "main.105bdb1f.css.map": "/static/css/main.105bdb1f.css.map",
+    "main.610bd1b8.js.map": "/static/js/main.610bd1b8.js.map",
+    "787.749b4a44.chunk.js.map": "/static/js/787.749b4a44.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.105bdb1f.css",
+    "static/js/main.610bd1b8.js"
+  ]
+}
