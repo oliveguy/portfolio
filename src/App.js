@@ -12,8 +12,7 @@ import react from './assets/react.png';
 import nodeexpress from './assets/nodeexpress.png';
 import mongodb from './assets/mongodb.png';
 
-import tremolo from './assets/tremolo.jpg';
-
+import Typed from "react-typed";
 import './App.scss';
 // COMPONENTS
 function Navigation(){
@@ -27,7 +26,7 @@ function Navigation(){
     <li><a href="#about">About</a></li>
     <li><a href="#technologies">Technologies</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="resume">Resum&#233;</a></li>
+    <li><a href="https://drive.google.com/file/d/1dL14YpYny5Dl-KeUqbk99_eXUZypwiDN/view">Resum&#233;</a></li>
   </ul>
 </nav>
 } 
@@ -39,8 +38,19 @@ function Topsection(){
   <div className='topText'>
     <img src={logo_cl}></img>
     <h1>Sunghyun Park</h1>
-    <h2>I am a front-end developer</h2>
-    <h2>who enjoys beating challenging problems</h2>
+    <h2>
+      <Typed
+      strings={[
+            "I'm a full-stack Developer",
+            "And UI/UX Designer as well !"
+          ]}
+          typeSpeed={110}
+          backSpeed={50}
+          loop
+        />
+        </h2>
+    <h3>Versatile Web Specialist</h3>
+    {/* https://gurtn.tistory.com/168 */}
     <a className='button' href="mailto:oliveguy85@gmail.com">
       <span>Contact &#x3e;</span>
     </a>
@@ -76,14 +86,36 @@ function Technologies(){
   <section>
     <article>
       <h3>Front-end</h3>
+      <div className='techList'>
+        <span>#HTML5</span><span>#CSS3</span><span>#SASS</span><span>#JS</span><span>#REACT</span>
+      </div>
     </article>
     <article>
       <h3>Back-end</h3>
+      <div className='techList'>
+        <span>#NodeJS</span><span>#PHP</span><span>#MySQL</span><span>#MongoDB</span><span>#OAuth</span>
+      </div>
     </article>
     <article>
       <h3>Design</h3>
+      <div className='techList'>
+        <span>#PS</span><span>#AI</span><span>#PR</span><span>#AE</span><span>#Adobe XD</span>
+      </div>
     </article>
   </section>
+</div>
+}
+function Contact(){
+  return <div id="contact">
+  <article>
+    <h2 className='h2Title'>Contact</h2>
+    <p>Please contact me at <a href="mailto:oliveguy85@gmail.com"><b>oliveguy85@gmail.com</b></a></p>
+    <p>and find me via following links as well.</p>
+    <div className='links'>
+      <a href="https://github.com/oliveguy"><img src={giticon}/></a>
+      <a href="https://www.linkedin.com/in/sunghyun-park-a29438243"><img src={likedin}/></a>
+    </div>
+  </article>
 </div>
 }
 function Footer(){
@@ -94,7 +126,6 @@ function Footer(){
     <li>
       <a href="https://github.com/oliveguy"><img src={giticon}/></a>
       <a href="https://www.linkedin.com/in/sunghyun-park-a29438243"><img src={likedin}/></a>
-      <a></a>
     </li>
   </ul>
 </footer>
@@ -108,7 +139,7 @@ function App() {
       brief:'e-learning website',
       desc:'e-learning website for very beginners to learn how to play the guitar',
       img:'tremolo',
-      tech:['SCSS','JS','NodeJS','MongoDB'],
+      tech:['SASS','JS','NodeJS','MongoDB'],
       url:'https://tremolo-370108.wl.r.appspot.com/',
       git:'https://github.com/oliveguy/tremolo'
     },
@@ -148,7 +179,7 @@ function App() {
       brief:'My portfolio website',
       desc:'Portfolio website to introduce Sunghyun',
       img:'portfolio',
-      tech:['SCSS','JS','REACT'],
+      tech:['SASS','JS','REACT'],
       url:'https://devsunghyun.com/',
       git:'https://github.com/oliveguy/portfolio'
     },
@@ -217,7 +248,8 @@ function App() {
               return <li>
               <a href={uiuxItem.url} target='_blank'><img src={require(`./assets/${uiuxItem.img}.jpg`)} className="uiuxview"/></a>
               {/* <img src={require(`./assets/blank.jpg`)}/> */}
-              <a href={uiuxItem.url} target='_blank'><img src={chain_gr}></img></a>
+              <a href={uiuxItem.url} target='_blank'>Learn more</a>
+              {/* <a href={uiuxItem.url} target='_blank'>Learn more<img src={chain_gr}></img></a> */}
               </li>
               })
             }
@@ -225,7 +257,9 @@ function App() {
           </ul>
         </section>
       </div>
+      <Contact></Contact>
       <Footer></Footer>
+      
     </div>
   );
 }

@@ -139,6 +139,12 @@ div.topSection{
       margin-bottom: 2rem;
       font-style: italic;
     }
+    h2{
+      font-style: italic;
+    }
+    h3{
+      font-weight: 400;
+    }
   }
 }
 a.button{
@@ -170,6 +176,7 @@ div#about{
       h2{
         font-size: 2rem;
       }
+
       p{
         margin:1rem 0;
       }
@@ -212,7 +219,6 @@ div#technologies{
     article{
       margin:0 1rem;
       width:100%;
-      height:200px;
       text-align: center;
       background-color: $box_red;
       h3{
@@ -222,7 +228,28 @@ div#technologies{
     }
   }
 }
-
+div.techList{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:1rem;
+  align-items: center;
+  span{
+    margin:.5rem;
+    padding: .1rem .25rem;
+    color:$box_accent;
+    font-weight: 600;
+    border:1px solid $box_accent;
+    border-radius: 5px;
+    &:hover{
+      border:1px solid $box_accent;
+      background-color:$box_accent;
+      color:$text;
+      transform: scale(1.1);
+      transition: .25s all ease-in-out;
+    }
+  }
+}
 div#projects{
   background-color:$d_red;
   padding: $section_padding;
@@ -348,6 +375,26 @@ section.uiux{
     }
   }
 }
+h2.h2Title{
+  font-size: 3rem;
+}
+div#contact{
+  background-color: $box_text;
+  padding: $section_padding;
+  article{
+    width:$view_width;
+    margin: 0 auto;
+  }
+}
+div.links{
+  margin:.5rem 0;
+  a{
+    margin-right: .5rem;
+    img{
+      filter:brightness(500%)
+    }
+  }
+}
 footer{
   width: 100%;
   background-color: $l_red;
@@ -400,7 +447,7 @@ footer{
     }
   }
   h2.h2Title{
-    font-size: 2rem;
+    font-size: 3rem;
   }
   div#technologies{
     padding: $mobile_section;
@@ -432,6 +479,9 @@ footer{
 
   img.uiuxview{
     min-width:100%;
+  }
+  div#contact{
+    padding: $mobile_section;
   }
   footer{
     ul{
